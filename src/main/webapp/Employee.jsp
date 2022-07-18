@@ -10,7 +10,7 @@
  <div style="width: 50%; margin: 0 auto">
         <h1>Employee</h1>
         <div>
-            <a href="/FirstJSPproject/Employees">View All Employee</a>
+            <a href="/FirstJSPproject/viewemp.jsp">View All Employee</a>
         </div>
         <div>
             <a href="/FirstJSPproject/addemp.jsp">Add Employee</a>

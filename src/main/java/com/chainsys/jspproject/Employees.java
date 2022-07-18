@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -41,19 +41,10 @@ public class Employees extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		PrintWriter out = response.getWriter();
-		List<Employee> allEmployees = EmployeeDao.getAllEmployee();
-		Iterator<Employee> empIterator = allEmployees.iterator();
-		while (empIterator.hasNext()) {
-			Employee result = empIterator.next();
-			out.println("<hr/>");//in emp
-		
-			out.println(result.getEmp_Id() +","  + result.getFirst_name() + "," + result.getLast_name() + ","
-					+ result.getEmail() + "," + result.getHire_date() + "," + result.getJob_id() + ","
-					+ result.getSalary() + "</p>" );
-		}
-	
+		 List<Employee> allEmployee = EmployeeDao.getAllEmployee();
+			request.setAttribute("emplist", allEmployee);
+			RequestDispatcher rd = request.getRequestDispatcher("/viewEmployee.jsp");
+			rd.forward(request, response);
 	}
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -237,6 +228,8 @@ public class Employees extends HttpServlet {
 			doPut(request, response);
 		} else if (request.getParameter("click").equals("DELETE_EMP")) {
 			doDelete(request, response);
+		}	else if(request.getParameter("click").equals("VIEW")) {
+			doGet(request, response);
 		}
 	}
 	
