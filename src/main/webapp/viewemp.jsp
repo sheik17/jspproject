@@ -4,16 +4,16 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Fetch All Employee</title>
 </head>
 <body>
-<form action ="Employees" method="get">
-<center>
-<h1> view all employees</h1>
-<div>
-<input type='submit' value='VIEW' name='click'>
-</div>
-</center>
-</form>
+<form action="EmployeeA" method="get">
+		<div style="Width: 50%; margin: 0 auto">
+			<h1>Click View All Employee</h1>
+			<div>
+				<input type='submit' value="VIEW" name="submit">
+			</div>
+		</div>
+	</form>
 </body>
 </html>

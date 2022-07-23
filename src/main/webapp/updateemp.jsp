@@ -7,23 +7,22 @@
 <title>Update Employee</title>
 </head>
 <body>
-	<form action="Employees" method="post">
-		<!--need to mention method = post  -->
-
+<form action="ModifyEmployeeServlet" method="post" >
+		<div style="Width: 50%; margin: 0 auto">
 			<div>
-				ID : <input type='text' name='id'>
+				Employee ID : <input type='text' name='id'>
 			</div>
 			<div>
 				First Name : <input type='text' name='fname'>
 			</div>
-<div>
+			<div>
 				Last Name : <input type='text' name='lname'>
 			</div>
 			<div>
 				E-mail : <input type='text' name='email'>
 			</div>
 			<div>
-				Hire Date : <input type='text' name='date'>
+				Hire Date : <input type='text' name='hdate'>
 			</div>
 			<div>
 				Job ID : <input type='text' name='jobid'>
@@ -32,9 +31,9 @@
 				Salary : <input type='text' name='salary'>
 			</div>
 			<div>
-			 <input
-				type='submit'name='click' value='UPDATE_EMP'>
-				</div>
-	</form>
+				<input type='submit' value="UPDATE" name="submit">
+			</div>
+		</div>
+		</form>
 </body>
 </html>

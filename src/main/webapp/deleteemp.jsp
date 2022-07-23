@@ -7,17 +7,16 @@
 <title>Delete Employee</title>
 </head>
 <body>
-<form action="Employees" method="post">
+<form action="RemoveEmployeeServlet" method="post">
 		<!--need to mention method = post  -->
-		
+		<div style="Width: 50%; margin: 0 auto">
 			<div>
-				ID : <input type='text' name='id'>
+				Employee ID : <input type='text' name='id'>
 			</div>
 			<div>
-			 <input
-				type='submit' name='click' value='DELETE_EMP'>
-				</div>
-			
-			</form>
+				<input type='submit' value="DELETE" name="submit" id="myButton">
+			</div>
+			</div>
+	</form>
 </body>
 </html>

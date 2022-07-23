@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,11 +7,19 @@
 <title>Index</title>
 </head>
 <body>
-	<div style="width: 50%; margin: 0 auto">
-		<h1>Welcome</h1>
-		<div>
-            <a href="/FirstJSPproject/Employee.jsp">Employee</a>
-        </div>
+	<h1>Welcome to JSP</h1>
+	<div>
+	<a href="addemp.jsp"> Add Employee</a>
 	</div>
+	<div>
+	<a href="updateemp.jsp"> Update Employee</a> 
+	</div>
+	<div>
+	<a href="deleteemp.jsp"> Delete Employee</a> 
+	</div>
+	<div>
+	<a href="ListAllEmployeesServlet"> Fetch All Employee</a> 
+	</div>
+	
 </body>
 </html>
